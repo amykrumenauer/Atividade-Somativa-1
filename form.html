@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte família -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+
+    <!-- Título -->
     <title>Adotar um Gato</title>
+
+    <!--Icone-->
+    <link rel="icon" href="imagens/gato.png" type="image/x-icon">
+
+    <!-- Link css -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="form.html">Adotar um Gato</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="form.html">Adote</a></li>
                 <li><a href="about.html">Sobre</a></li>
             </ul>
         </nav>
@@ -25,8 +38,8 @@
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="age">Idade:</label>
-            <input type="number" id="age" name="age" min="1" required>
+            <label for="telefone">Telefone:</label>
+            <input type="number" id="telefone" name="telefone" min="11" required>
 
             <label for="catName">Nome do Gato:</label>
             <input type="text" id="catName" name="catName" required>
@@ -34,9 +47,12 @@
             <input type="submit" value="Enviar">
         </form>
     </main>
+
     <footer>
         <p>&copy; 2024 Adoção de Gatos</p>
+        <p><a href="about.html">Sobre Nós</a> | <a href="index.html">Início</a> | <a href="form.html">Adotar um Gato</a></p>
     </footer>
+    
     <script src="js/script.js"></script>
 </body>
 </html>
