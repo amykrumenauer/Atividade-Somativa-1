@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte família -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+
+    <!-- Título -->
     <title>Dados da Adoção</title>
+
+    <!--Icone-->
+    <link rel="icon" href="imagens/gato.png" type="image/x-icon">
+
+    
+    <!-- Link css -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -17,13 +31,41 @@
         </nav>
     </header>
     <main>
-        <h1>Dados da Adoção</h1>
         <div id="result"></div>
     </main>
-    <footer>
-        <p>&copy; 2024 Adoção de Gatos</p>
-    </footer>
+
     <script src="js/script.js"></script>
+
+    <script>
+        // Captura dos dados enviados via GET
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            const email = params.get('email');
+            const telefone = params.get('telefone');
+            const catName = params.get('catName');
+
+            if (name && email && telefone && catName) {
+                document.getElementById('result').innerHTML = `
+                    <h2>Dados da Adoção:</h2>
+                    <p>Nome: ${name}</p>
+                    <p>Email: ${email}</p>
+                    <p>Idade: ${telefone}</p>
+                    <p>Nome do Gato: ${catName}</p>
+                `;
+            } else {
+                document.getElementById('result').innerHTML = `
+                    <h2>Erro ao carregar os dados.</h2>
+                    <p>Por favor, volte e preencha o formulário novamente.</p>
+                `;
+            }
+        };
+    </script>
+
+<footer>
+    <p>&copy; 2024 Adoção de Gatos</p>
+    <p><a href="about.html">Sobre Nós</a> | <a href="index.html">Início</a> | <a href="form.html">Adotar um Gato</a></p>
+</footer>
+
 </body>
 </html>
-
